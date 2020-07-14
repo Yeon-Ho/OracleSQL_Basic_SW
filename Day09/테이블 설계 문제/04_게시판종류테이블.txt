@@ -1,0 +1,9 @@
+	+ + + TABLE + + +
+	board_cate	게시판 종류
+
+	+ + + COLUMNS + + +
+	cateno	게시판코드
+	cate_name	게시판이름
+	cate_dat	게시판등록일
+
+	** PK - cate

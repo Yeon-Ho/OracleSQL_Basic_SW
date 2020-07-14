@@ -1,0 +1,11 @@
+	+ + + TABLE + + +
+	commenttb	댓글
+
+	+ + + COLUMNS + + +
+	commentno	댓글번호	(PK)
+	boardno	게시글코드	(FK)
+	userno	댓글작성자	(FK)
+	content	댓글내용
+	insert_dat	작성일
+
+	** content - null 허용

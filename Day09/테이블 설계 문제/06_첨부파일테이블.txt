@@ -1,0 +1,14 @@
+	+ + + TABLE + + +
+	filetb	첨부파일
+
+	+ + + COLUMNS + + +
+	fileno	파일번호	(PK)
+	boardno	게시글코드	(FK)
+	filename	파일이름
+	filepath	파일저장경로
+	filesize	파일크기
+	filetype	파일타입
+
+	** filesize - NUMBER
+
+	** filesize, filetype - NULL 허용

@@ -1,0 +1,16 @@
+	+ + + TABLE + + +
+	board	게시판
+
+	+ + + COLUMNS + + +
+	boardno	게시글코드	(PK)
+	cateno	게시판코드	(FK)
+	title	글제목
+	content	글내용
+	insert_dat	작성일
+	update_dat	수정일
+	hit	조회수
+	has_file	첨부파일 유무
+	userno	작성자	(FK)
+
+	** hit - NUMBER
+	** has_file - VARCHAR2(1) : n(없음) y(있음) 로 구분할 예정

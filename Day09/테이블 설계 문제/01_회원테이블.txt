@@ -1,0 +1,21 @@
+	+ + + TABLE + + +
+	userTb	회원
+
+	+ + + COLUMNS + + +
+	userno	회원번호
+	userid	회원아이디
+	userpw	회원비밀번호
+	gender	성별
+	email	이메일
+	phone	전화번호
+	grade	등급코드
+	report	신고코드
+
+	** userno, grade, report는 NUBMER
+	** 나머지는 모두 VARCHAR2( 크기는 적당히 )
+
+	** PK - userno
+
+	** FK - grade, report
+
+	** gender, email, phone - null 허용

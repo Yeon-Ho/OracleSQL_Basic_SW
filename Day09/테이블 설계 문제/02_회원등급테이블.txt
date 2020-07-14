@@ -1,0 +1,11 @@
+	+ + + TABLE + + +
+	grade	회원등급
+
+	+ + + COLUMNS + + +
+	grade	등급코드
+	gradename	등급명
+
+	** grade - NUBMER
+	** 나머지 - VARCHAR2( 크기는 적당히 )
+
+	** PK - grade
