@@ -1,0 +1,35 @@
++ 기본키 지정 방법
+
+- 방법 1: 컬럼에 제약조건 이름을 명시하며 지정하기 , PRIMARY KEY(컬럼레벨) 컬럼옆에 이름있이
+ 
+CREATE TABLE cons_09(
+    no NUMBER CONSTRAINT cons_09_pk PRIMARY KEY,
+    data VARCHAR2(20) NOT NULL
+ );
+
+
+- 방법 2: 컬럼에 제약조건 이름없이 지정하기, 이름 없이 프라이머리키(컬럼레벨)
+ 
+CREATE TABLE cons_10(
+    no NUMBER PRIMARY KEY,  
+    data VARCHAR2(20) NOT NULL
+ );
+ 
+
+- 방법3 : 컬럼 설정 이후에 CONSTRAINT 키워드로 지정하기, 마지막에 이름에 프라이머리키 설정(컬럼레벨)
+ 
+CREATE TABLE cons_11(
+    no NUMBER,
+    data VARCHAR2(20) NOT NULL,
+    CONSTRAINT cons_11_pk PRIMARY KEY(no)
+ );
+
+
+- 방법 4 : 테이블 생성 이후 ALTER TABLE로 지정하기, 테이블만 만들고 ALTER로 (테이블레벨)
+
+CREATE TABLE cons_12(
+    no NUMBER,
+    data VARCHAR2(20) NOT NULL
+ );
+ALTER TABLE cons_12
+ADD CONSTRAINT cons_12_pk PRIMARY KEY (no);
