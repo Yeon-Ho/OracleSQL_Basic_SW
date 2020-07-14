@@ -1,0 +1,117 @@
+2020-03-20
+
++ 오라클 Database 11g R2 Express Edition 다운로드 하기
+ 
+ - https://www.oracle.com/
+
+ - Password : 1234
+
+그 검색해보니까 회사내에서 문서를 주고받고 할때 
+
++ 오라클 DBMS 설치 확인
+ 
+ - 윈도우 콘솔창 열기
+
+ - conn sys as syssdba
+
+ - 비밀번호 1234 입력
+
+ - show user; 입력
+
+ - USER is "SYS" 라고 나오면 설치 완료
+
+ + scott.sql 파일을 DB에 적용하기
+
+ - cmd 
+
+ - sqlplus /nolog
+
+ - conn system/1234;
+
+ - show user;
+ 
+ - USER is "SYSTEM"
+
+ - @C:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql
+
+ - conn scott/tiger;
+
+ - show user;
+
+ - SELECT * FROM dept; 입력
+ 	->부서 정보가 나옴
+
++ SQL Developer 에서 데이터베이스에 접속 하기
+
+ - 파일 메뉴 - 새로만들기
+
+ - General - 접속선택
+
+ - 오른쪽 창에서 데이터베이스 접속 선택
+
+ - 확인
+ - 접속 이름  : WEB
+ - 사용자이릅 : scott
+ - 비밀번호 : tiger
+ - 비밀번호 저장 체크
+
+ - 테스트 -> 상태 : 성공 뜨는 거 확인
+
+ - 접속
+
++ 컴퓨터 부팅할 때 오라클 서비스 자동으로 켜지지 않게 하기
+
+ - win키 +r (실행) 창에서
+
+ - services.msg 입력
+
+ - OracleServiceXE , OrcleXETNSListener 속성들어가서 수동으로 하기
+ - 오라클 DB를 사용하려면 "Start Database" 프로그램 실행해야함
+
+
++ 오라클 클라이언트 툴(Tool)
+
+1. SQL*Plus
+	- Oracle DBMS에서 제공하는 기본 도구 Tool
+	- 별도의 설치없이 사용 가능
+
+	- CLI환경 ( Command Line Interface )
+
+	- 윈도우 콘솔에서 sqlplus 라고 입력하면 댐
+
+ 	- 아니면 시작메뉴에서 'Run SQL Command Line' 실행
+
+2. SQL*Developer
+	- 오라클에서 제공해주는 추가적인 클라이언트 Tool
+
+	- GUI환경 ( Graphical User Interface)
+
++ DBMS , DataBase Management System
+ - 데이터베이스 관리 시스템
+
+ - Oracle DB , MS-SQL , MySql , MongoDB , SQLite 등등
+
+
++ 데이터 베이스 , DataBase , DB
+ - 데이터 저장소
+
+ - 체계적인 데이터의 모음
+
+ - 목적 : 여러 클라이언트(사람, 프로그램 등)들이 데이터를 공유하면서 사용할 목적으로
+	  관리되는 통합 정보 시스템
+
+ - 데이터베이스 내에 테이블을 생성하여 데이터를 관리(저장)한다.
+
+ - 우리는 오라클 DB를 사용
+
+ 	버전 : Oracle DB 11g Release 2
+	제품군 : Express Edition
+	(Standard Edition , Standard One Edition , Enterprise Edition)
+
+ 	** Oracle DB Express Edition(XE) 에는 DB가 한 개만 존재한다.
+	** SID : xe (DB이름)
+
+	** Standard Edition 도 DB가 한 개만 존재한다.
+	** SID : orcl (DB이름)
+
+	** Enerprise Edition 은 DB를 여러 개 생성할 수 있음
