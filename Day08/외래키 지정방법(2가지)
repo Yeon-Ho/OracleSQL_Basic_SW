@@ -1,0 +1,26 @@
+
++ 외래키 지정 방식
+
+ - 방법 1 : 컬럼 설정 이후에 CONSTRAINT 로 지정하기
+
+CREATE TABLE cons_14(
+    num NUMBER,
+    data VARCHAR2(50),
+    CONSTRAINT cons_14_FK   
+        FOREIGN KEY ( num )  --자기 테이블 FK
+        REFERENCES cons_12( no ) -- 참조 테이블 PK
+);
+
+
+
+ - 방법 2 : 테이블 생성 후에 ALTER TABLE로 지정하기
+
+CREATE TABLE cons_15(
+    num NUMBER,
+    data VARCHAR2(50)
+);
+
+ALTER TABLE cons_15
+ADD CONSTRAINT cons_15_fk  
+        FOREIGN KEY ( num )  --자기 테이블 FK
+        REFERENCES cons_12( no ); -- 참조 테이블 PK
